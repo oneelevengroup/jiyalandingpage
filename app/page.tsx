@@ -3,9 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="wrap">
-      <p className="eyebrow fade d1">
-        Jindal Institute for Youthful Aging · Raleigh, NC
-      </p>
+      <p className="eyebrow fade d1">Facial Cosmetic Surgery · Raleigh, NC</p>
 
       <Image
         className="logo fade d2"
@@ -15,7 +13,7 @@ export default function Home() {
         height={1294}
         priority
       />
-      <p className="subbrand fade d2">Facial Cosmetic Surgery</p>
+      <p className="subbrand fade d2">Jindal Institute for Youthful Aging</p>
 
       <h2 className="headline fade d3">A refined new experience is on the way</h2>
 
