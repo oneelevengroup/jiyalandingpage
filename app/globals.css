@@ -16,33 +16,19 @@
 html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Dark scrim + vignette over the cinematic hero portrait keeps the
-     cream/gold text legible while the image reads through subtly. */
-  background:
-    linear-gradient(rgba(10, 8, 7, 0.58), rgba(10, 8, 7, 0.72)),
-    radial-gradient(120% 90% at 50% 18%, rgba(27, 21, 16, 0) 0%, rgba(10, 8, 7, 0.55) 100%),
-    url("/hero.jpg") center center / cover no-repeat;
   background-color: var(--noir-deep);
   color: var(--cream);
   font-family: var(--sans);
-  text-align: center;
-  padding: 40px 24px;
-  overflow: hidden;
 }
 
-.wrap {
-  max-width: 720px;
-  width: 100%;
-}
+/* ---------- Entrance animations ---------- */
 
-/* Each element fades up in sequence */
+/* On-load fade-up (hero, above the fold) */
 .fade {
   opacity: 0;
   transform: translateY(22px);
@@ -61,6 +47,42 @@ body {
   }
 }
 
+/* Scroll-reveal (sections below the fold) */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 56px 24px;
+  /* Dark scrim + vignette over the cinematic hero portrait keeps the
+     cream/gold text legible while the image reads through subtly. */
+  background:
+    linear-gradient(rgba(10, 8, 7, 0.58), rgba(10, 8, 7, 0.72)),
+    radial-gradient(120% 90% at 50% 18%, rgba(27, 21, 16, 0) 0%, rgba(10, 8, 7, 0.55) 100%),
+    url("/hero.jpg") center center / cover no-repeat;
+  background-color: var(--noir-deep);
+}
+
+.hero-inner {
+  max-width: 720px;
+  width: 100%;
+}
+
 .eyebrow {
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -68,7 +90,6 @@ body {
   color: rgba(242, 234, 221, 0.55);
 }
 
-/* Brand logo (vertical JIYA lockup) */
 .logo {
   display: block;
   width: auto;
@@ -88,8 +109,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: clamp(1.5rem, 4.5vw, 2.6rem);
+  font-weight: 400;
   color: var(--cream);
-  margin-top: 48px;
+  margin-top: 44px;
 }
 
 .tagline {
@@ -102,15 +124,151 @@ body {
   color: rgba(242, 234, 221, 0.75);
 }
 
+/* Flower scroll cue */
+.scroll-cue {
+  position: absolute;
+  bottom: clamp(20px, 4vh, 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  line-height: 0;
+}
+.scroll-cue img {
+  width: 36px;
+  height: auto;
+  opacity: 0.72;
+  animation: floaty 2.6s ease-in-out infinite;
+  transition: opacity 0.4s ease;
+}
+.scroll-cue:hover img {
+  opacity: 1;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(9px); }
+}
+
+/* ---------- Services ---------- */
+.services {
+  padding: clamp(80px, 13vw, 150px) 24px;
+  background: radial-gradient(120% 70% at 50% 0%, #1b1510 0%, var(--noir) 55%, var(--noir-deep) 100%);
+}
+
+.services-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.34em;
+  color: var(--gold);
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 400;
+  color: var(--cream);
+  text-align: center;
+  margin-top: 14px;
+}
+
+.section-lead {
+  margin: 20px auto 0;
+  max-width: 54ch;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: rgba(242, 234, 221, 0.7);
+}
+
+.menu {
+  margin-top: clamp(48px, 7vw, 84px);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: clamp(44px, 6vw, 60px);
+}
+@media (min-width: 760px) {
+  .menu {
+    grid-template-columns: 1fr 1fr;
+    column-gap: clamp(48px, 6vw, 90px);
+    row-gap: clamp(52px, 6vw, 76px);
+  }
+}
+
+.cat-name {
+  font-family: var(--display);
+  color: var(--gold);
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.28);
+}
+
+.cat-desc {
+  margin-top: 16px;
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(242, 234, 221, 0.72);
+  max-width: 46ch;
+}
+
+.cat-list {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.7;
+  color: rgba(242, 234, 221, 0.82);
+}
+.cat-list li {
+  display: inline-flex;
+  align-items: center;
+}
+.cat-list li:not(:last-child)::after {
+  content: "·";
+  margin: 0 11px;
+  color: var(--gold);
+  opacity: 0.55;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: clamp(64px, 9vw, 120px) 24px clamp(72px, 10vw, 130px);
+  text-align: center;
+}
+
+.footer-eyebrow {
+  margin-top: 36px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: rgba(242, 234, 221, 0.5);
+}
+
 .divider {
   width: 1px;
   height: 56px;
-  margin: 40px auto 0;
+  margin: 0 auto;
   background: rgba(242, 234, 221, 0.25);
 }
 
 .contact {
-  margin-top: 36px;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -144,17 +302,25 @@ body {
   letter-spacing: 0.22em;
   color: var(--cream);
   text-decoration: none;
-  transition: background 0.5s cubic-bezier(0.22, 1, 0.36, 1), color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .cta:hover {
   background: var(--cream);
   color: var(--noir);
 }
 
+/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
-  .fade {
+  html { scroll-behavior: auto; }
+  .fade,
+  .reveal {
     animation: none;
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+  .scroll-cue img {
+    animation: none;
   }
 }
