@@ -1,0 +1,154 @@
+:root {
+  --noir: #14100d;
+  --noir-deep: #0a0807;
+  --cream: #f2eadd;
+  --gold: #d4a853;
+  --display: var(--font-forum), Georgia, serif;
+  --sans: var(--font-mulish), system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(120% 90% at 50% 18%, #1b1510 0%, var(--noir) 45%, var(--noir-deep) 100%);
+  color: var(--cream);
+  font-family: var(--sans);
+  text-align: center;
+  padding: 40px 24px;
+  overflow: hidden;
+}
+
+.wrap {
+  max-width: 720px;
+  width: 100%;
+}
+
+/* Each element fades up in sequence */
+.fade {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.d1 { animation-delay: 0.15s; }
+.d2 { animation-delay: 0.35s; }
+.d3 { animation-delay: 0.55s; }
+.d4 { animation-delay: 0.75s; }
+.d5 { animation-delay: 0.95s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.34em;
+  color: rgba(242, 234, 221, 0.55);
+}
+
+/* Brand logo (vertical JIYA lockup) */
+.logo {
+  display: block;
+  width: auto;
+  height: clamp(150px, 34vw, 280px);
+  margin: 28px auto 8px;
+}
+
+.subbrand {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.36em;
+  color: rgba(242, 234, 221, 0.5);
+}
+
+.headline {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: clamp(1.5rem, 4.5vw, 2.6rem);
+  color: var(--cream);
+  margin-top: 48px;
+}
+
+.tagline {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  line-height: 1.9;
+  color: rgba(242, 234, 221, 0.75);
+}
+
+.divider {
+  width: 1px;
+  height: 56px;
+  margin: 40px auto 0;
+  background: rgba(242, 234, 221, 0.25);
+}
+
+.contact {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+.contact a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: color 0.4s ease;
+}
+.contact a:hover {
+  color: var(--gold);
+}
+.contact .addr {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: rgba(242, 234, 221, 0.5);
+  text-transform: uppercase;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 6px;
+  border: 1px solid var(--cream);
+  padding: 15px 34px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--cream);
+  text-decoration: none;
+  transition: background 0.5s cubic-bezier(0.22, 1, 0.36, 1), color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cta:hover {
+  background: var(--cream);
+  color: var(--noir);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
