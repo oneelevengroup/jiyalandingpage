@@ -27,7 +27,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${forum.variable} ${mulish.variable}`}>
-      <body>{children}</body>
+      <body>
+        <noscript>
+          <style>{`.reveal{opacity:1 !important;transform:none !important;}`}</style>
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }
