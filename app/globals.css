@@ -263,6 +263,9 @@ body {
 }
 
 .cat-name {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-family: var(--display);
   color: var(--gold);
   font-size: clamp(1.6rem, 3.6vw, 2.1rem);
@@ -271,6 +274,12 @@ body {
   text-transform: uppercase;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(212, 168, 83, 0.3);
+}
+
+.cat-icon {
+  flex: 0 0 auto;
+  width: clamp(26px, 3.4vw, 34px);
+  height: auto;
 }
 
 .cat-desc {

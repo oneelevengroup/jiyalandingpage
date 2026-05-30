@@ -154,15 +154,19 @@ export default function Home() {
             <p className="section-eyebrow">What we do</p>
             <h2 className="section-title">Our Services</h2>
             <p className="section-lead">
-              A full spectrum of facial cosmetic, oculofacial, and regenerative
-              care — surgical artistry and non-surgical refinement under one roof.
+              At JIYA Cosmetics in Raleigh, NC, we offer a full spectrum of
+              facial cosmetic, oculofacial, and regenerative care — surgical
+              artistry and non-surgical refinement under one roof.
             </p>
           </Reveal>
 
           <div className="menu">
             {categories.map((category) => (
               <Reveal key={category.name} className="cat">
-                <h3 className="cat-name">{category.name}</h3>
+                <h3 className="cat-name">
+                  <img className="cat-icon" src="/jiya-icon.png" alt="" aria-hidden="true" />
+                  {category.name}
+                </h3>
                 <p className="cat-desc">{category.description}</p>
                 <ul className="svc-list">
                   {category.treatments.map((t) => (
