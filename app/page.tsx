@@ -199,7 +199,17 @@ export default function Home() {
             <h2 className="section-title">Meet Dr. Jindal</h2>
           </Reveal>
 
-          <Reveal className="about-bio">
+          <Reveal className="about-grid">
+            <div className="about-photo">
+              <Image
+                src="/dr-jindal.png"
+                alt="Dr. Sumeet Jindal, MD, MBA"
+                width={1100}
+                height={1568}
+                className="about-img"
+              />
+            </div>
+            <div className="about-bio">
             <p>
               <strong>Sumeet Jindal, MD, MBA</strong> is a board-certified
               ophthalmologist with advanced fellowship training in oculofacial
@@ -233,6 +243,7 @@ export default function Home() {
               <a className="btn btn-secondary" href="#contact">
                 Contact Us
               </a>
+            </div>
             </div>
           </Reveal>
 
