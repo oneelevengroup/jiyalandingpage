@@ -143,7 +143,8 @@ export default function Home() {
           </div>
         </div>
 
-        <a href="#services" className="scroll-cue fade d5" aria-label="Explore our services">
+        <a href="#services" className="scroll-cue fade d5" aria-label="Scroll to services">
+          <span className="scroll-label">Scroll</span>
           <img src="/jiya-icon.png" alt="" width={36} height={36} />
         </a>
       </section>
@@ -177,6 +178,14 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                <div className="cat-actions">
+                  <a className="btn btn-primary btn-sm" href="tel:+19842753818">
+                    Book a Consult
+                  </a>
+                  <a className="btn btn-secondary btn-sm" href="#contact">
+                    Contact Us
+                  </a>
+                </div>
               </Reveal>
             ))}
           </div>
