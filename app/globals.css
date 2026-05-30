@@ -90,32 +90,51 @@ body {
   color: rgba(242, 234, 221, 0.55);
 }
 
+/* Brand lockup — the subline is justified to the exact width of the logo */
+.brand {
+  display: inline-block;
+}
+
 .logo {
   display: block;
   width: auto;
   height: clamp(150px, 34vw, 280px);
-  margin: 28px auto 8px;
+  margin: 28px auto 12px;
 }
 
 .subbrand {
-  font-size: 0.6rem;
+  display: block;
+  width: 100%;
+  font-size: 0.64rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.36em;
-  color: rgba(242, 234, 221, 0.5);
+  text-align: justify;
+  text-align-last: justify;
+  letter-spacing: 0.04em;
+  color: rgba(242, 234, 221, 0.74);
+}
+
+.announce-date {
+  margin-top: 46px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--gold);
 }
 
 .headline {
   font-family: var(--display);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: clamp(1.5rem, 4.5vw, 2.6rem);
+  letter-spacing: 0.02em;
+  font-size: clamp(1.5rem, 4.2vw, 2.5rem);
   font-weight: 400;
+  line-height: 1.18;
   color: var(--cream);
-  margin-top: 44px;
+  margin-top: 12px;
 }
 
 .tagline {
-  margin-top: 18px;
+  margin-top: 22px;
   font-size: 0.85rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -156,7 +175,7 @@ body {
 }
 
 .services-inner {
-  max-width: 1080px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
@@ -190,60 +209,91 @@ body {
 }
 
 .menu {
-  margin-top: clamp(48px, 7vw, 84px);
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: start;
-  gap: clamp(44px, 6vw, 60px);
-}
-@media (min-width: 760px) {
-  .menu {
-    grid-template-columns: 1fr 1fr;
-    column-gap: clamp(48px, 6vw, 90px);
-    row-gap: clamp(52px, 6vw, 76px);
-  }
+  margin-top: clamp(52px, 7vw, 88px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(56px, 8vw, 90px);
 }
 
 .cat-name {
   font-family: var(--display);
   color: var(--gold);
-  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  font-size: clamp(1.6rem, 3.6vw, 2.1rem);
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(212, 168, 83, 0.28);
+  border-bottom: 1px solid rgba(212, 168, 83, 0.3);
 }
 
 .cat-desc {
   margin-top: 16px;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 300;
   line-height: 1.75;
   color: rgba(242, 234, 221, 0.72);
-  max-width: 46ch;
+  max-width: 60ch;
 }
 
-.cat-list {
+/* Menu-style treatment rows: name · dotted leader · description */
+.svc-list {
   list-style: none;
-  margin-top: 20px;
+  margin-top: 26px;
+}
+
+.svc {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid rgba(242, 234, 221, 0.09);
+}
+.svc:last-child {
+  border-bottom: 1px solid rgba(242, 234, 221, 0.09);
+}
+
+.svc-name {
+  flex: 0 1 auto;
+  max-width: 42%;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  line-height: 1.7;
-  color: rgba(242, 234, 221, 0.82);
+  color: var(--cream);
 }
-.cat-list li {
-  display: inline-flex;
-  align-items: center;
+
+.svc-leader {
+  flex: 1 1 auto;
+  align-self: flex-end;
+  border-bottom: 1px dotted rgba(212, 168, 83, 0.45);
+  margin: 0 14px 6px;
+  min-width: 18px;
 }
-.cat-list li:not(:last-child)::after {
-  content: "·";
-  margin: 0 11px;
-  color: var(--gold);
-  opacity: 0.55;
+
+.svc-desc {
+  flex: 0 1 50%;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: rgba(242, 234, 221, 0.62);
+}
+
+@media (max-width: 620px) {
+  .svc {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+  .svc-name {
+    max-width: 100%;
+  }
+  .svc-leader {
+    display: none;
+  }
+  .svc-desc {
+    flex-basis: auto;
+  }
 }
 
 /* ---------- Footer ---------- */
