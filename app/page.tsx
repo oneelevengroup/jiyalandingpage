@@ -192,6 +192,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="about" className="about">
+        <div className="about-inner">
+          <Reveal>
+            <p className="section-eyebrow">About</p>
+            <h2 className="section-title">Meet Dr. Jindal</h2>
+          </Reveal>
+
+          <Reveal className="about-bio">
+            <p>
+              <strong>Sumeet Jindal, MD, MBA</strong> is a board-certified
+              ophthalmologist with advanced fellowship training in oculofacial
+              cosmetic surgery. His expertise in eye microsurgery and cosmetic and
+              reconstructive eyelid and facial procedures allows him to perform
+              some of the most advanced and refined techniques in modern eyelid
+              and facial plastic surgery.
+            </p>
+            <p>
+              Dr. Jindal specializes in endoscopic facial and brow lifting using
+              tiny, well-hidden incisions, enabling natural rejuvenation of the
+              upper and midface with minimal scarring and downtime. He is also
+              highly sought after for complex revision cases, including eyelid
+              retraction and correction of prior unsuccessful or &ldquo;botched&rdquo;
+              surgeries.
+            </p>
+            <p>
+              Dr. Jindal was accepted into medical school directly out of high
+              school through the Early Assurance Program at East Carolina
+              University. He completed his ophthalmology residency in Richmond,
+              Virginia, where he performed a record number of surgical cases,
+              gaining extensive operative experience early in his career. He then
+              further refined his skills through advanced fellowship training at a
+              large, multi-location private practice in Florida before returning
+              to Raleigh, North Carolina, where he now practices.
+            </p>
+            <div className="about-actions">
+              <a className="btn btn-primary" href="tel:+19842753818">
+                Book a Consultation
+              </a>
+              <a className="btn btn-secondary" href="#contact">
+                Contact Us
+              </a>
+            </div>
+          </Reveal>
+
+          <Reveal className="members">
+            <p className="members-title">Member of</p>
+            <ul className="members-list">
+              <li>American Board of Facial Cosmetic Surgery</li>
+              <li>The American Board of Laser Surgery</li>
+              <li>American Academy of Cosmetic Surgery</li>
+              <li>American Board of Ophthalmology</li>
+              <li>Koniver Wellness</li>
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
       <footer id="contact" className="footer">
         <Reveal>
           <div className="divider" />
