@@ -125,10 +125,11 @@ body {
 
 .headline {
   font-family: var(--display);
-  letter-spacing: 0.02em;
-  font-size: clamp(1.5rem, 4.2vw, 2.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: clamp(1.45rem, 4vw, 2.4rem);
   font-weight: 400;
-  line-height: 1.18;
+  line-height: 1.2;
   color: var(--cream);
   margin-top: 12px;
 }
@@ -141,6 +142,49 @@ body {
   letter-spacing: 0.16em;
   line-height: 1.9;
   color: rgba(242, 234, 221, 0.75);
+}
+
+/* Hero call-to-action buttons */
+.hero-actions {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--cream);
+  padding: 15px 34px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--cream);
+  text-decoration: none;
+  transition: background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.5s ease;
+}
+
+.btn-primary {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.btn-primary:hover {
+  background: var(--gold);
+  color: var(--noir);
+}
+
+.btn-secondary {
+  border-color: rgba(242, 234, 221, 0.55);
+  color: var(--cream);
+}
+.btn-secondary:hover {
+  background: var(--cream);
+  color: var(--noir);
+  border-color: var(--cream);
 }
 
 /* Flower scroll cue */

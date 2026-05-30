@@ -132,6 +132,15 @@ export default function Home() {
             <br />
             Luxury facial cosmetic surgery &amp; regenerative care.
           </p>
+
+          <div className="hero-actions fade d5">
+            <a className="btn btn-primary" href="tel:+19842753818">
+              Book a Consultation
+            </a>
+            <a className="btn btn-secondary" href="#contact">
+              Contact Us
+            </a>
+          </div>
         </div>
 
         <a href="#services" className="scroll-cue fade d5" aria-label="Explore our services">
@@ -170,7 +179,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="footer">
+      <footer id="contact" className="footer">
         <Reveal>
           <div className="divider" />
           <p className="footer-eyebrow">Now welcoming patients</p>
