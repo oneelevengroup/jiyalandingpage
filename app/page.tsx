@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import BookButton from "./BookButton";
+import ConsultModal from "./ConsultModal";
 
 type Treatment = { name: string; blurb: string };
 type Category = {
@@ -93,9 +95,9 @@ export default function Home() {
           </p>
 
           <div className="hero-actions fade d5">
-            <a className="btn btn-primary" href="tel:+19842753818">
+            <BookButton className="btn btn-primary">
               Book a Complimentary Consultation
-            </a>
+            </BookButton>
             <a className="btn btn-secondary" href="#contact">
               Contact Us
             </a>
@@ -138,9 +140,9 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="cat-actions">
-                  <a className="btn btn-primary btn-sm" href="tel:+19842753818">
+                  <BookButton className="btn btn-primary btn-sm">
                     Book a Complimentary Consultation
-                  </a>
+                  </BookButton>
                   <a className="btn btn-secondary btn-sm" href="#contact">
                     Contact Us
                   </a>
@@ -196,9 +198,9 @@ export default function Home() {
               to Raleigh, North Carolina, where he now practices.
             </p>
             <div className="about-actions">
-              <a className="btn btn-primary" href="tel:+19842753818">
+              <BookButton className="btn btn-primary">
                 Book a Complimentary Consultation
-              </a>
+              </BookButton>
               <a className="btn btn-secondary" href="#contact">
                 Contact Us
               </a>
@@ -226,12 +228,14 @@ export default function Home() {
           <div className="contact">
             <a href="tel:+19842753818">(984) 275-3818</a>
             <span className="addr">7901 ACC Blvd, Suite 201 · Raleigh, NC 27617</span>
-            <a className="cta" href="tel:+19842753818">
+            <BookButton className="cta">
               Book a Complimentary Consultation
-            </a>
+            </BookButton>
           </div>
         </Reveal>
       </footer>
+
+      <ConsultModal />
     </>
   );
 }

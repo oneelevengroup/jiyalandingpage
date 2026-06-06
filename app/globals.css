@@ -158,6 +158,10 @@ body {
 
 .btn {
   display: inline-block;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
   border: 1px solid var(--cream);
   padding: 15px 34px;
   font-size: 0.7rem;
@@ -514,6 +518,10 @@ body {
 
 .cta {
   display: inline-block;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
   margin-top: 6px;
   border: 1px solid var(--cream);
   padding: 15px 34px;
@@ -543,4 +551,60 @@ body {
   .scroll-cue img {
     animation: none;
   }
+}
+
+/* ---------- Consultation modal (Typeform popup) ---------- */
+.consult-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.consult-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.consult-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  z-index: 1001;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.6rem;
+  line-height: 1;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.consult-close:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.consult-body {
+  width: 100%;
+  height: 100%;
+}
+.consult-body [data-tf-live],
+.consult-body iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
 }
