@@ -403,6 +403,26 @@ body {
   .about-grid {
     grid-template-columns: 0.85fr 1.15fr;
   }
+  /* Dr. P block mirrors the layout: photo on the right */
+  .about-grid.reverse {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  .about-grid.reverse .about-photo {
+    order: 2;
+  }
+  .about-grid.reverse .about-bio {
+    order: 1;
+  }
+}
+
+.doctor-name {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 18px;
 }
 
 .about-photo {

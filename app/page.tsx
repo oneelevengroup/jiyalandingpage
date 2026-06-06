@@ -158,7 +158,7 @@ export default function Home() {
         <div className="about-inner">
           <Reveal>
             <p className="section-eyebrow">About</p>
-            <h2 className="section-title">Meet Dr. Jindal</h2>
+            <h2 className="section-title">Meet the Team</h2>
           </Reveal>
 
           <Reveal className="about-grid">
@@ -172,6 +172,7 @@ export default function Home() {
               />
             </div>
             <div className="about-bio">
+            <h3 className="doctor-name">Dr. Sumeet Jindal</h3>
             <p>
               <strong>Sumeet Jindal, MD, MBA</strong> is a board-certified
               ophthalmologist with advanced fellowship training in oculofacial
@@ -197,6 +198,45 @@ export default function Home() {
               further refined his skills through advanced fellowship training at a
               large, multi-location private practice in Florida before returning
               to Raleigh, North Carolina, where he now practices.
+            </p>
+            <div className="about-actions">
+              <BookButton className="btn btn-primary">
+                Book a Complimentary Consultation
+              </BookButton>
+              <a className="btn btn-secondary" href="#contact">
+                Contact Us
+              </a>
+            </div>
+            </div>
+          </Reveal>
+
+          <Reveal className="about-grid reverse">
+            <div className="about-photo">
+              <Image
+                src="/dr-prabakaran.webp"
+                alt="Dr. Samantha Prabakaran, MD"
+                width={415}
+                height={545}
+                className="about-img"
+              />
+            </div>
+            <div className="about-bio">
+            <h3 className="doctor-name">Dr. Samantha Prabakaran</h3>
+            <p>
+              <strong>Samantha Prabakaran, MD</strong> is a board-certified
+              ophthalmologist with specialized training in oculofacial cosmetic
+              surgery. Her practice focuses on advanced surgical techniques for
+              upper blepharoplasty, ptosis repair, cosmetic lower blepharoplasty,
+              eye bag removal, brow lifting, and reconstructive eyelid surgery.
+            </p>
+            <p>
+              Dr. Prabakaran completed her ophthalmology residency at Virginia
+              Commonwealth University, where she trained in a high-volume surgical
+              program and developed a strong foundation in complex eyelid and
+              ophthalmic procedures. She then completed advanced fellowship
+              training at New Century Ophthalmology and JIYA Facial Cosmetic
+              Surgery, where she further refined her expertise in both cosmetic
+              and functional oculofacial surgery.
             </p>
             <div className="about-actions">
               <BookButton className="btn btn-primary">
