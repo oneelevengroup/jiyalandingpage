@@ -624,3 +624,40 @@ body {
   height: 100% !important;
   border: 0 !important;
 }
+
+/* Floating consultation launcher (bottom-left) */
+.consult-fab {
+  position: fixed;
+  left: clamp(16px, 3vw, 28px);
+  bottom: clamp(16px, 3vw, 28px);
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: var(--noir);
+  border: 1px solid var(--gold);
+  color: var(--cream);
+  padding: 12px 20px;
+  font-size: 0.66rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+  transition: background 0.4s ease, color 0.4s ease, transform 0.3s ease;
+}
+.consult-fab img {
+  width: 22px;
+  height: auto;
+  flex: 0 0 auto;
+}
+.consult-fab span {
+  white-space: nowrap;
+}
+.consult-fab:hover {
+  background: var(--gold);
+  color: var(--noir);
+  transform: translateY(-2px);
+}

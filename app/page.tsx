@@ -235,6 +235,11 @@ export default function Home() {
         </Reveal>
       </footer>
 
+      <BookButton className="consult-fab">
+        <img src="/jiya-icon.png" alt="" width={22} height={22} />
+        <span>Book a Consult</span>
+      </BookButton>
+
       <ConsultModal />
     </>
   );
