@@ -210,6 +210,17 @@ export default function Home() {
             </div>
           </Reveal>
 
+          <Reveal className="members">
+            <p className="members-title">Member of</p>
+            <ul className="members-list">
+              <li>American Board of Facial Cosmetic Surgery</li>
+              <li>The American Board of Laser Surgery</li>
+              <li>American Academy of Cosmetic Surgery</li>
+              <li>American Board of Ophthalmology</li>
+              <li>Koniver Wellness</li>
+            </ul>
+          </Reveal>
+
           <Reveal className="about-grid reverse">
             <div className="about-photo">
               <Image
@@ -249,16 +260,6 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <Reveal className="members">
-            <p className="members-title">Member of</p>
-            <ul className="members-list">
-              <li>American Board of Facial Cosmetic Surgery</li>
-              <li>The American Board of Laser Surgery</li>
-              <li>American Academy of Cosmetic Surgery</li>
-              <li>American Board of Ophthalmology</li>
-              <li>Koniver Wellness</li>
-            </ul>
-          </Reveal>
         </div>
       </section>
 
