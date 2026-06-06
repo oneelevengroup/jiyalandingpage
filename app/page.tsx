@@ -213,10 +213,10 @@ export default function Home() {
           <Reveal className="about-grid reverse">
             <div className="about-photo">
               <Image
-                src="/dr-prabakaran.webp"
+                src="/dr-prabakaran.png"
                 alt="Dr. Samantha Prabakaran, MD"
                 width={415}
-                height={545}
+                height={493}
                 className="about-img"
               />
             </div>
