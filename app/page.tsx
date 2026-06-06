@@ -228,8 +228,10 @@ export default function Home() {
         <Reveal>
           <div className="divider" />
           <p className="footer-eyebrow">Now welcoming patients</p>
+          <h2 className="footer-title">Contact Us</h2>
           <div className="contact">
             <a href="tel:+19842753818">(984) 275-3818</a>
+            <a href="mailto:info@jiyacosmetic.com">info@jiyacosmetic.com</a>
             <span className="addr">7901 ACC Blvd, Suite 201 · Raleigh, NC 27617</span>
             <BookButton className="cta">
               Book a Complimentary Consultation

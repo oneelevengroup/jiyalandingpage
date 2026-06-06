@@ -484,6 +484,16 @@ body {
   color: rgba(242, 234, 221, 0.5);
 }
 
+.footer-title {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 400;
+  color: var(--cream);
+  margin-top: 12px;
+}
+
 .divider {
   width: 1px;
   height: 56px;
