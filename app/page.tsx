@@ -97,7 +97,7 @@ export default function Home() {
 
           <div className="hero-actions fade d5">
             <BookButton className="btn btn-primary">
-              Book a Complimentary Consultation
+              Book a Consultation
             </BookButton>
             <a className="btn btn-secondary" href="#contact">
               Contact Us
@@ -142,7 +142,7 @@ export default function Home() {
                 </ul>
                 <div className="cat-actions">
                   <BookButton className="btn btn-primary btn-sm">
-                    Book a Complimentary Consultation
+                    Book a Consultation
                   </BookButton>
                   <a className="btn btn-secondary btn-sm" href="#contact">
                     Contact Us
@@ -201,7 +201,7 @@ export default function Home() {
             </p>
             <div className="about-actions">
               <BookButton className="btn btn-primary">
-                Book a Complimentary Consultation
+                Book a Consultation
               </BookButton>
               <a className="btn btn-secondary" href="#contact">
                 Contact Us
@@ -240,7 +240,7 @@ export default function Home() {
             </p>
             <div className="about-actions">
               <BookButton className="btn btn-primary">
-                Book a Complimentary Consultation
+                Book a Consultation
               </BookButton>
               <a className="btn btn-secondary" href="#contact">
                 Contact Us
@@ -274,7 +274,7 @@ export default function Home() {
             <a href="mailto:info@jiyacosmetic.com">info@jiyacosmetic.com</a>
             <span className="addr">7901 ACC Blvd, Suite 201 · Raleigh, NC 27617</span>
             <BookButton className="cta">
-              Book a Complimentary Consultation
+              Book a Consultation
             </BookButton>
           </div>
         </Reveal>

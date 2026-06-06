@@ -49,7 +49,7 @@ export default function ConsultModal() {
         className="consult-card"
         role="dialog"
         aria-modal="true"
-        aria-label="Book a complimentary consultation"
+        aria-label="Book a consultation"
         onClick={(e) => e.stopPropagation()}
       >
         <button
