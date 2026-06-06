@@ -42,21 +42,27 @@ export default function ConsultModal() {
   return (
     <div
       className={`consult-modal ${open ? "is-open" : ""}`}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Book a complimentary consultation"
       aria-hidden={!open}
+      onClick={() => setOpen(false)}
     >
-      <button
-        type="button"
-        className="consult-close"
-        aria-label="Close"
-        onClick={() => setOpen(false)}
+      <div
+        className="consult-card"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Book a complimentary consultation"
+        onClick={(e) => e.stopPropagation()}
       >
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div className="consult-body">
-        <div data-tf-live="01KTEJC9JNNFH5A0TPYDS3RZSC" />
+        <button
+          type="button"
+          className="consult-close"
+          aria-label="Close"
+          onClick={() => setOpen(false)}
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div className="consult-body">
+          <div data-tf-live="01KTEJC9JNNFH5A0TPYDS3RZSC" />
+        </div>
       </div>
     </div>
   );
