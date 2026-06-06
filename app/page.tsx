@@ -260,6 +260,12 @@ export default function Home() {
             </div>
           </Reveal>
 
+          <Reveal className="members">
+            <p className="members-title">Member of</p>
+            <ul className="members-list">
+              <li>American Board of Ophthalmology</li>
+            </ul>
+          </Reveal>
         </div>
       </section>
 
