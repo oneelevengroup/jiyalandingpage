@@ -94,7 +94,7 @@ export default function Home() {
 
           <div className="hero-actions fade d5">
             <a className="btn btn-primary" href="tel:+19842753818">
-              Book a Consultation
+              Book a Complimentary Consultation
             </a>
             <a className="btn btn-secondary" href="#contact">
               Contact Us
@@ -139,7 +139,7 @@ export default function Home() {
                 </ul>
                 <div className="cat-actions">
                   <a className="btn btn-primary btn-sm" href="tel:+19842753818">
-                    Book a Consult
+                    Book a Complimentary Consultation
                   </a>
                   <a className="btn btn-secondary btn-sm" href="#contact">
                     Contact Us
@@ -197,7 +197,7 @@ export default function Home() {
             </p>
             <div className="about-actions">
               <a className="btn btn-primary" href="tel:+19842753818">
-                Book a Consultation
+                Book a Complimentary Consultation
               </a>
               <a className="btn btn-secondary" href="#contact">
                 Contact Us
@@ -227,7 +227,7 @@ export default function Home() {
             <a href="tel:+19842753818">(984) 275-3818</a>
             <span className="addr">7901 ACC Blvd, Suite 201 · Raleigh, NC 27617</span>
             <a className="cta" href="tel:+19842753818">
-              Book a Consultation
+              Book a Complimentary Consultation
             </a>
           </div>
         </Reveal>
