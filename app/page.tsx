@@ -2,6 +2,7 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import BookButton from "./BookButton";
 import ConsultModal from "./ConsultModal";
+import BeforeAfterGallery from "./BeforeAfterGallery";
 
 type Treatment = { name: string; blurb: string };
 type Category = {
@@ -220,6 +221,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <BeforeAfterGallery />
 
       <footer id="contact" className="footer">
         <Reveal>
