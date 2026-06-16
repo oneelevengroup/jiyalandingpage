@@ -676,7 +676,19 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
-  transition: background 0.4s ease, color 0.4s ease, transform 0.3s ease;
+  /* Hidden over the hero; revealed once the next section scrolls into view */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(14px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease,
+    background 0.4s ease, color 0.4s ease;
+}
+.consult-fab.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
 }
 .consult-fab img {
   width: 22px;
@@ -758,4 +770,39 @@ body {
 .gallery-nav.next { right: 10px; }
 @media (max-width: 640px) {
   .gallery-nav { display: none; }
+}
+
+/* Follow Along — social icons */
+.social {
+  margin-top: clamp(40px, 6vw, 60px);
+}
+.social-title {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: rgba(242, 234, 221, 0.5);
+}
+.social-list {
+  margin-top: 22px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(16px, 3vw, 26px);
+}
+.social-link {
+  display: inline-flex;
+  color: var(--cream);
+  transition: color 0.35s ease, transform 0.35s ease;
+}
+.social-link:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+.social-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  display: block;
 }

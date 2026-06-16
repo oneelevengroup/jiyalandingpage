@@ -2,7 +2,9 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import BookButton from "./BookButton";
 import ConsultModal from "./ConsultModal";
+import ConsultFab from "./ConsultFab";
 import BeforeAfterGallery from "./BeforeAfterGallery";
+import SocialLinks from "./SocialLinks";
 
 type Treatment = { name: string; blurb: string };
 type Category = {
@@ -277,20 +279,18 @@ export default function Home() {
           <p className="footer-eyebrow">Now welcoming patients</p>
           <h2 className="footer-title">Contact Us</h2>
           <div className="contact">
-            <a href="tel:+19842753818">(984) 275-3818</a>
+            <a href="tel:+19199296006">(919) 929-6006</a>
             <a href="mailto:info@jiyacosmetic.com">info@jiyacosmetic.com</a>
             <span className="addr">7901 ACC Blvd, Suite 201 · Raleigh, NC 27617</span>
             <BookButton className="cta">
               Book a Consultation
             </BookButton>
           </div>
+          <SocialLinks />
         </Reveal>
       </footer>
 
-      <BookButton className="consult-fab">
-        <img src="/jiya-icon.png" alt="" width={22} height={22} />
-        <span>Book a Consult</span>
-      </BookButton>
+      <ConsultFab />
 
       <ConsultModal />
     </>
