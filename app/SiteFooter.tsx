@@ -1,6 +1,5 @@
 import Reveal from "./Reveal";
 import BookButton from "./BookButton";
-import SocialLinks from "./SocialLinks";
 
 export default function SiteFooter() {
   return (
@@ -15,7 +14,6 @@ export default function SiteFooter() {
           <span className="addr">7901 ACC Blvd, Suite 201 · Raleigh, NC 27617</span>
           <BookButton className="cta">Book a Consultation</BookButton>
         </div>
-        <SocialLinks />
       </Reveal>
     </footer>
   );
