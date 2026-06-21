@@ -28,9 +28,11 @@ export default function ConsultationPage() {
           />
           <h1 className="lp-title">Book Your Consultation</h1>
           <p className="lp-sub">
-            Tell us a little about you and our team will reach out to schedule
-            your visit.
+            Book your visit below. We can&rsquo;t wait to meet you.
           </p>
+          <a className="lp-help" href="#contact">
+            Need help? Contact us
+          </a>
         </header>
 
         <section className="lp-form">

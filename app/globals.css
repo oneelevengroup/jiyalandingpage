@@ -831,11 +831,28 @@ body {
 }
 .lp-sub {
   margin: 16px auto 0;
-  max-width: 48ch;
-  font-size: 0.9rem;
+  max-width: 46ch;
+  font-size: 0.95rem;
   font-weight: 300;
-  line-height: 1.8;
-  color: rgba(242, 234, 221, 0.72);
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  color: rgba(242, 234, 221, 0.78);
+}
+.lp-help {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(242, 234, 221, 0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 168, 83, 0.4);
+  padding-bottom: 3px;
+  transition: color 0.35s ease, border-color 0.35s ease;
+}
+.lp-help:hover {
+  color: var(--gold);
+  border-color: var(--gold);
 }
 .lp-form {
   margin-top: clamp(32px, 5vw, 48px);
