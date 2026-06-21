@@ -1,12 +1,15 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Coming-soon site is a single page. Any old deep URL (e.g. Facebook ad
+// Real routes that should NOT be redirected to the landing page.
+const ALLOWED = new Set(["/", "/consultation"]);
+
+// Coming-soon site is mostly a single page. Any old deep URL (e.g. Facebook ad
 // "Learn More" links to /blepharoplasty) would otherwise 404, so send every
 // unknown path to the landing page (preserving query params like fbclid/UTM).
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  if (pathname !== "/") {
+  if (!ALLOWED.has(pathname)) {
     const url = request.nextUrl.clone();
     url.pathname = "/";
     return NextResponse.redirect(url, 307);
