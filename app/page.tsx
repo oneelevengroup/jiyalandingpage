@@ -89,7 +89,7 @@ export default function Home() {
             <span className="subbrand">Jindal Institute for Youthful Aging</span>
           </span>
 
-          <p className="announce-date fade d3">New Site Debuting 7.1.26</p>
+          <p className="announce-date fade d3">Launching 7/15</p>
           <h1 className="headline fade d3">A refined new experience is on the way.</h1>
 
           <p className="tagline fade d4">
