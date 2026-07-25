@@ -91,7 +91,7 @@ body {
   color: rgba(242, 234, 221, 0.55);
 }
 
-/* Brand lockup — the subline is justified to the exact width of the logo */
+/* Brand lockup: the subline is justified to the exact width of the logo */
 .brand {
   display: inline-block;
 }
@@ -772,7 +772,7 @@ body {
   .gallery-nav { display: none; }
 }
 
-/* Follow Along — social icons */
+/* Follow Along: social icons */
 .social {
   margin-top: clamp(40px, 6vw, 60px);
 }

@@ -17,9 +17,9 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "JIYA — Coming Soon",
+  title: "JIYA | Coming Soon",
   description:
-    "JIYA — Jindal Institute for Youthful Aging. A refined new experience is on the way. Facial cosmetic surgery & regenerative care in Raleigh, NC.",
+    "JIYA, Jindal Institute for Youthful Aging. A refined new experience is on the way. Facial cosmetic surgery & regenerative care in Raleigh, NC.",
 };
 
 export default function RootLayout({
