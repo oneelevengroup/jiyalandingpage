@@ -18,7 +18,7 @@ const categories: Category[] = [
   {
     name: "Eye",
     description:
-      "Oculofacial and oculoplastic expertise — eyelid, brow, and vision procedures that refresh and restore the eyes.",
+      "Oculofacial and oculoplastic expertise: eyelid, brow, and vision procedures that refresh and restore the eyes.",
     treatments: [
       { name: "Upper Blepharoplasty", blurb: "Lifts heavy, hooding skin on the upper lids to open and brighten the eyes." },
       { name: "Ptosis Repair", blurb: "Corrects a drooping upper eyelid to restore its natural position and field of vision." },
@@ -36,7 +36,7 @@ const categories: Category[] = [
   {
     name: "Face",
     description:
-      "Surgical facial rejuvenation — from the deep plane facelift to contouring and resurfacing.",
+      "Surgical facial rejuvenation, from the deep plane facelift to contouring and resurfacing.",
     treatments: [
       { name: "Deep Plane Facelift", blurb: "Repositions deeper facial tissues for a natural, long-lasting lift." },
       { name: "Deep Neck Lift", blurb: "Redefines the neck and jawline by addressing the deeper neck structures." },
@@ -58,7 +58,7 @@ const categories: Category[] = [
   {
     name: "Non-Surgical",
     description:
-      "Injectables, lasers, and regenerative treatments to refresh and renew — no surgery required.",
+      "Injectables, lasers, and regenerative treatments to refresh and renew. No surgery required.",
     treatments: [
       { name: "IPL", blurb: "Intense pulsed light to even tone and reduce redness and sun damage." },
       { name: "Fillers", blurb: "Restores volume and smooths lines for a refreshed, natural look." },
@@ -81,7 +81,7 @@ export default function Home() {
             <Image
               className="logo"
               src="/jiya-logo.png"
-              alt="JIYA — Jindal Institute for Youthful Aging"
+              alt="JIYA, Jindal Institute for Youthful Aging"
               width={1133}
               height={1294}
               priority
@@ -118,7 +118,7 @@ export default function Home() {
             <h2 className="section-title">Our Services</h2>
             <p className="section-lead">
               At JIYA Cosmetics in Raleigh, NC, we offer a full spectrum of
-              facial cosmetic, oculofacial, and regenerative care — surgical
+              facial cosmetic, oculofacial, and regenerative care: surgical
               artistry and non-surgical refinement under one roof.
             </p>
           </Reveal>

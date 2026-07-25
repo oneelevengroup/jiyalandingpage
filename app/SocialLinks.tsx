@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 type Social = { name: string; href: string; path: string };
 
-// Placeholder hrefs ("#") — swap in real profile URLs when available.
+// Placeholder hrefs ("#") swap in real profile URLs when available.
 const socials: Social[] = [
   {
     "name": "Instagram",

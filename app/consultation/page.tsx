@@ -7,9 +7,9 @@ import SiteFooter from "../SiteFooter";
 import ConsultModal from "../ConsultModal";
 
 export const metadata: Metadata = {
-  title: "Book a Consultation — JIYA",
+  title: "Book a Consultation | JIYA",
   description:
-    "Request your consultation with JIYA — Jindal Institute for Youthful Aging. Facial cosmetic surgery & regenerative care in Raleigh, NC.",
+    "Request your consultation with JIYA, Jindal Institute for Youthful Aging. Facial cosmetic surgery & regenerative care in Raleigh, NC.",
 };
 
 export default function ConsultationPage() {
@@ -21,7 +21,7 @@ export default function ConsultationPage() {
           <Image
             className="lp-logo"
             src="/jiya-logo.png"
-            alt="JIYA — Jindal Institute for Youthful Aging"
+            alt="JIYA, Jindal Institute for Youthful Aging"
             width={1133}
             height={1294}
             priority
