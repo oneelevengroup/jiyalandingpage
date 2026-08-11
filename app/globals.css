@@ -607,8 +607,8 @@ body {
 /* Floating card that hovers over the dimmed page */
 .consult-card {
   position: relative;
-  width: min(640px, 100%);
-  height: min(86vh, 820px);
+  width: min(820px, 96vw);
+  height: min(94vh, 960px);
   background: #000;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65);
   overflow: hidden;
@@ -859,7 +859,9 @@ body {
 }
 .tf-inline {
   width: 100%;
-  height: clamp(560px, 72vh, 760px);
+  /* Tall enough for the Calendly scheduling step to render and scroll,
+     on mobile and desktop. */
+  height: clamp(640px, 90vh, 960px);
 }
 .tf-inline iframe {
   width: 100% !important;
