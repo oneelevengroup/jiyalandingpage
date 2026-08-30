@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Forum, Mulish } from "next/font/google";
 import "./globals.css";
 
@@ -27,6 +28,19 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${forum.variable} ${mulish.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18406910212"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18406910212');`}
+        </Script>
+      </head>
       <body>
         <noscript>
           <style>{`.reveal{opacity:1 !important;transform:none !important;}`}</style>
