@@ -19,7 +19,7 @@
     <!--
       SELF-CONTAINED LANDING PAGE.
       Images are self-hosted from this repo's /public directory.
-      The "Book" buttons open the JIYA Typeform (id ZJCdEhfD) as a popup.
+      The "Book" buttons open the JIYA Typeform (id g4piiJ3d) as a popup, firing a Google Ads conversion on submit.
     -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -173,7 +173,7 @@
         <img src="/jiya-logo-horizontal.png" alt="JIYA, Jindal Institute for Youthful Aging" />
         <div class="right">
           <a class="phone" href="tel:+19199296006">(919) 929-6006</a>
-          <button class="btn-primary sm" data-tf-popup="ZJCdEhfD" data-tf-size="100">Book Now</button>
+          <button class="btn-primary sm bleph-cta">Book Now</button>
         </div>
       </div>
     </header>
@@ -195,7 +195,7 @@
             <span class="txt">Blepharoplasty<br />Special</span>
           </div>
           <div class="cta-row rv">
-            <button class="btn-primary" data-tf-popup="ZJCdEhfD" data-tf-size="100">Claim This Offer</button>
+            <button class="btn-primary bleph-cta">Claim This Offer</button>
             <a class="btn-ghost" href="tel:+19199296006">Call (919) 929-6006</a>
           </div>
           <p class="rv" style="margin-top:24px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.18em;color:rgba(242,234,221,.5);">
@@ -218,13 +218,13 @@
             <span class="name">Upper Blepharoplasty</span>
             <span class="big">$4,000</span>
             <span class="note">Typically performed under local anesthesia</span>
-            <div class="book"><button class="btn-primary" data-tf-popup="ZJCdEhfD" data-tf-size="100">Book This</button></div>
+            <div class="book"><button class="btn-primary bleph-cta">Book This</button></div>
           </div>
           <div class="price-card rv">
             <span class="name">Lower Blepharoplasty</span>
             <span class="big">$4,000</span>
             <span class="note">Does not include IV sedation (twilight) fees</span>
-            <div class="book"><button class="btn-primary" data-tf-popup="ZJCdEhfD" data-tf-size="100">Book This</button></div>
+            <div class="book"><button class="btn-primary bleph-cta">Book This</button></div>
           </div>
         </div>
       </div>
@@ -262,7 +262,7 @@
           <h2 class="display d-md rv" style="margin-top:20px;color:var(--cream);">Dr. Samantha Prabakaran</h2>
           <p class="body rv" style="margin-top:24px;max-width:40rem;">Samantha Prabakaran, MD is a board-certified ophthalmologist with specialized training in oculofacial cosmetic surgery. She completed her ophthalmology residency at Virginia Commonwealth University, a high-volume surgical program, building a strong foundation in complex eyelid and ophthalmic procedures.</p>
           <p class="body rv" style="margin-top:24px;max-width:40rem;">Her practice focuses on advanced techniques for upper blepharoplasty, ptosis repair, cosmetic lower blepharoplasty, eye-bag removal, brow lifting, and reconstructive eyelid surgery.</p>
-          <div class="rv" style="margin-top:36px;"><button class="btn-primary" data-tf-popup="ZJCdEhfD" data-tf-size="100">Book with Dr. Prabakaran</button></div>
+          <div class="rv" style="margin-top:36px;"><button class="btn-primary bleph-cta">Book with Dr. Prabakaran</button></div>
         </div>
       </div>
     </section>
@@ -325,7 +325,7 @@
             <div class="row rv"><div><span class="rn">Upper Blepharoplasty</span></div><span class="rp">$6,000</span></div>
             <div class="row rv"><div><span class="rn">Lower Blepharoplasty</span><span class="rnote" style="display:block;">Includes anesthesia</span></div><span class="rp">$8,000</span></div>
           </div>
-          <div class="rv" style="margin-top:36px;"><button class="btn-primary" data-tf-popup="ZJCdEhfD" data-tf-size="100">Book with Dr. Jindal</button></div>
+          <div class="rv" style="margin-top:36px;"><button class="btn-primary bleph-cta">Book with Dr. Jindal</button></div>
         </div>
       </div>
     </section>
@@ -337,7 +337,7 @@
         <h2 class="display d-lg gold rv" style="margin:24px auto 0;"><span class="nowrap">Blepharoplasty, from $4,000</span></h2>
         <p class="rv" style="margin:24px auto 0;max-width:32rem;font-size:0.85rem;font-weight:300;text-transform:uppercase;letter-spacing:0.14em;line-height:1.7;color:rgba(242,234,221,.7);">Book your consultation with Dr. Samantha Prabakaran, MD while this special lasts</p>
         <div class="cta-row rv" style="justify-content:center;">
-          <button class="btn-primary" data-tf-popup="ZJCdEhfD" data-tf-size="100">Claim This Offer</button>
+          <button class="btn-primary bleph-cta">Claim This Offer</button>
           <a class="btn-ghost" href="tel:+19199296006">Call (919) 929-6006</a>
         </div>
         <p class="rv" style="margin-top:32px;font-size:0.7rem;line-height:1.6;color:rgba(242,234,221,.4);">JIYA Eyelid &amp; Facial Cosmetic Surgery + Hair Restoration · 7901 ACC Blvd, Suite 201, Raleigh, NC 27617</p>
@@ -348,7 +348,7 @@
     <div class="sticky">
       <div class="wrap">
         <div><span class="from">From $4,000</span><span class="lbl">Blepharoplasty Special</span></div>
-        <button class="btn-primary sm" data-tf-popup="ZJCdEhfD" data-tf-size="100">Book Now</button>
+        <button class="btn-primary sm bleph-cta">Book Now</button>
       </div>
     </div>
 
@@ -358,6 +358,29 @@
         entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
       }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
       document.querySelectorAll(".rv").forEach(function (el) { io.observe(el); });
+    </script>
+
+    <!-- Typeform popup via JS API, firing the Google Ads conversion on submit -->
+    <script>
+      (function () {
+        var SEND_TO = "AW-18406910212/0nrzCJady-ocEITSjMlE";
+        function start() {
+          if (!window.tf || !window.tf.createPopup) { setTimeout(start, 120); return; }
+          var popup = window.tf.createPopup("g4piiJ3d", {
+            size: 100,
+            onSubmit: function () {
+              if (typeof window.gtag === "function") {
+                gtag("event", "conversion", { send_to: SEND_TO });
+              }
+            }
+          });
+          var btns = document.querySelectorAll(".bleph-cta");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () { popup.open(); });
+          }
+        }
+        start();
+      })();
     </script>
   </body>
 </html>
