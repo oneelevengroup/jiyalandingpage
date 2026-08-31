@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import BookButton from "./BookButton";
+import ContactButton from "./ContactButton";
 import ConsultFab from "./ConsultFab";
 import BeforeAfterGallery from "./BeforeAfterGallery";
 import AboutSection from "./AboutSection";
@@ -98,9 +99,9 @@ export default function Home() {
             <BookButton className="btn btn-primary">
               Book a Consultation
             </BookButton>
-            <a className="btn btn-secondary" href="#contact">
+            <ContactButton className="btn btn-secondary">
               Contact Us
-            </a>
+            </ContactButton>
           </div>
         </div>
 
@@ -143,9 +144,9 @@ export default function Home() {
                   <BookButton className="btn btn-primary btn-sm">
                     Book a Consultation
                   </BookButton>
-                  <a className="btn btn-secondary btn-sm" href="#contact">
+                  <ContactButton className="btn btn-secondary btn-sm">
                     Contact Us
-                  </a>
+                  </ContactButton>
                 </div>
               </Reveal>
             ))}

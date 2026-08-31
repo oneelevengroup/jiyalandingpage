@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import BookButton from "./BookButton";
+import ContactButton from "./ContactButton";
 
 export default function AboutSection() {
   return (
@@ -53,9 +54,9 @@ export default function AboutSection() {
               <BookButton className="btn btn-primary">
                 Book a Consultation
               </BookButton>
-              <a className="btn btn-secondary" href="#contact">
+              <ContactButton className="btn btn-secondary">
                 Contact Us
-              </a>
+              </ContactButton>
             </div>
           </div>
         </Reveal>
@@ -103,9 +104,9 @@ export default function AboutSection() {
               <BookButton className="btn btn-primary">
                 Book a Consultation
               </BookButton>
-              <a className="btn btn-secondary" href="#contact">
+              <ContactButton className="btn btn-secondary">
                 Contact Us
-              </a>
+              </ContactButton>
             </div>
           </div>
         </Reveal>
