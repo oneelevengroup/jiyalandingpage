@@ -1,11 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { TF_FORM_ID, fireConsultConversion, ensureTypeformScript } from "./typeform";
+import { useEffect, useState } from "react";
 
 export default function ConsultModal() {
   const [open, setOpen] = useState(false);
-  const bodyRef = useRef<HTMLDivElement>(null);
 
   // Open on the global "open-consult" event dispatched by BookButton
   useEffect(() => {
@@ -31,28 +29,14 @@ export default function ConsultModal() {
     };
   }, [open]);
 
-  // Build the Typeform widget once, with the conversion on submit
+  // Load the Typeform embed script once (it renders the [data-tf-live] form)
   useEffect(() => {
-    const el = bodyRef.current;
-    if (!el) return;
-    ensureTypeformScript();
-    let done = false;
-    const poll = window.setInterval(() => {
-      const tf = (window as unknown as { tf?: { createWidget?: Function } }).tf;
-      if (done || !tf?.createWidget) return;
-      done = true;
-      window.clearInterval(poll);
-      el.innerHTML = "";
-      tf.createWidget(TF_FORM_ID, {
-        container: el,
-        onSubmit: fireConsultConversion,
-      });
-    }, 120);
-    const stop = window.setTimeout(() => window.clearInterval(poll), 10000);
-    return () => {
-      window.clearInterval(poll);
-      window.clearTimeout(stop);
-    };
+    if (document.getElementById("tf-embed-script")) return;
+    const s = document.createElement("script");
+    s.src = "https://embed.typeform.com/next/embed.js";
+    s.id = "tf-embed-script";
+    s.async = true;
+    document.body.appendChild(s);
   }, []);
 
   return (
@@ -76,7 +60,9 @@ export default function ConsultModal() {
         >
           <span aria-hidden="true">&times;</span>
         </button>
-        <div className="consult-body" ref={bodyRef} />
+        <div className="consult-body">
+          <div data-tf-live="01KTEJC9JNNFH5A0TPYDS3RZSC" />
+        </div>
       </div>
     </div>
   );
