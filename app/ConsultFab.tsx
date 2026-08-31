@@ -25,7 +25,8 @@ export default function ConsultFab() {
       className={`consult-fab ${visible ? "is-visible" : ""}`}
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
-      onClick={() => window.dispatchEvent(new Event("open-consult"))}
+      data-tf-popup="ZJCdEhfD"
+      data-tf-size="100"
     >
       <img src="/jiya-icon.png" alt="" width={22} height={22} />
       <span>Book a Consult</span>

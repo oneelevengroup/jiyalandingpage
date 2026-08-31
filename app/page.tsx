@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import BookButton from "./BookButton";
-import ConsultModal from "./ConsultModal";
 import ConsultFab from "./ConsultFab";
 import BeforeAfterGallery from "./BeforeAfterGallery";
 import AboutSection from "./AboutSection";
@@ -162,7 +161,6 @@ export default function Home() {
 
       <ConsultFab />
 
-      <ConsultModal />
     </>
   );
 }

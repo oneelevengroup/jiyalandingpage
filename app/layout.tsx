@@ -40,6 +40,11 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-18406910212');`}
         </Script>
+        {/* Typeform embed — binds data-tf-popup / data-tf-live site-wide */}
+        <Script
+          src="https://embed.typeform.com/next/embed.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body>
         <noscript>

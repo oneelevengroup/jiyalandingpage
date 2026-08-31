@@ -4,7 +4,6 @@ import TypeformInline from "../TypeformInline";
 import BeforeAfterGallery from "../BeforeAfterGallery";
 import AboutSection from "../AboutSection";
 import SiteFooter from "../SiteFooter";
-import ConsultModal from "../ConsultModal";
 
 export const metadata: Metadata = {
   title: "Book a Consultation | JIYA",
@@ -46,7 +45,6 @@ export default function ConsultationPage() {
 
       <SiteFooter />
 
-      <ConsultModal />
     </>
   );
 }
