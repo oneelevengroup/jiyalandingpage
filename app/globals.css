@@ -676,6 +676,7 @@ body {
   gap: 10px;
   appearance: none;
   cursor: pointer;
+  text-decoration: none;
   font-family: inherit;
   background: var(--noir);
   border: 1px solid var(--gold);
