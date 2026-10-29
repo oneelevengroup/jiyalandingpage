@@ -19,17 +19,22 @@ export default function ConsultFab() {
     };
   }, []);
 
+  // Real link to the hosted form so the launcher is never dead: Typeform's
+  // embed.js upgrades it to an in-page popup, and if that script fails to load
+  // or bind (common on mobile Safari) tapping still opens the hosted form.
   return (
-    <button
-      type="button"
+    <a
       className={`consult-fab ${visible ? "is-visible" : ""}`}
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
+      href="https://form.typeform.com/to/ZJCdEhfD"
+      target="_blank"
+      rel="noopener"
       data-tf-popup="ZJCdEhfD"
       data-tf-size="100"
     >
       <img src="/jiya-icon.png" alt="" width={22} height={22} />
       <span>Book a Consult</span>
-    </button>
+    </a>
   );
 }
